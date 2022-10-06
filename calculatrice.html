@@ -1,0 +1,70 @@
+<html> 
+    <style>
+
+    button {background-color: yellow;
+   width : 100%;
+   Height :100%;
+   }
+    
+    table { background-color: blue;
+   height : 300;}
+   input{ height :40;
+   width : 300;}
+      
+   
+      </style>
+    <body> 
+    <table border="1"> 
+       <tr> 
+          <td colspan="4"><input id="output" ><br> 
+       </tr> 
+       <tr> 
+          <td><button onclick="afficher('1')">1</button></td>  
+          <td><button onclick="afficher('2')">2</button></td> 
+          <td><button onclick="afficher('3')">3</button></td> 
+          <td><button onclick="afficher('+')">+</button></td> 
+       </tr> 
+       <tr> 
+          <td><button onclick="afficher('4')">4</button></td> 
+          <td><button onclick="afficher('5')">5</button></td> 
+          <td><button onclick="afficher('6')">6</button></td> 
+          <td><button onclick="afficher('-')">-</button></td> 
+       </tr> 
+       <tr> 
+          <td><button onclick="afficher('7')">7</button></td> 
+          <td><button onclick="afficher('8')">8</button></td> 
+          <td><button onclick="afficher('9')">9</button></td> 
+          <td><button onclick="afficher('*')">*</button></td> 
+       </tr> 
+       <tr>
+          <td><button onclick="afficher('0')">0</button></td> 
+          <td><button onclick="afficher('.')">.</button></td> 
+          <td><button onclick="afficher('/')">/</button></td> 
+          <td><button onclick="effacer()">c</button></td> 
+       </tr> 
+       <tr>
+        <td colspan="4"><button onclick="calculer()">=</button></td> 
+     </tr> 
+    </table> 
+    <script> 
+
+        //fonction qui affiche la valeur
+        function afficher(val) 
+        { 
+            document.getElementById("output").value+=val  
+        } 
+        //fonction qui efface l'écran 
+        function effacer() 
+        { 
+            document.getElementById("output").value = "" 
+        } 
+         //fonction qui évalue le chiffre et renvoie la sortie
+         function calculer() 
+         { 
+             let a = document.getElementById("output").value  
+             let b = eval(a)
+             document.getElementById("output").value = b
+         } 
+     </script>
+ </body> 
+</html>
