@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body> 
 
-<h2>HTML Forms</h2>
+ <label for="fname">Temperature en°C :</label><br>
+ <input type= "number"  id= "C" value= "C"> <br>
 
-<form action="/action_page.php">
-  <label for="fname">Temperature en°C :</label><br>
+ <label for="fname">Temperature en F :</label><br>
+ <input type= "number"  id= "F" value= "F"> <br>
  
-  <input type="F TO °C " value="F TO °C">
- <button type="button" onclick="myFunction()">C TO F</button>
-  <button type="button" onclick="myFunction()">F TO C</button>
 
+ <button type="button" onclick= "ctof() ">C TO F</button>
+ <button type="button" onclick= "ftoc() ">F TO C</button>
 </form>
 
+<script>
+   function ctof() 
+        { 
+            document.getElementById("F").value=( document.getElementById("C").value*9/5) + 32 ;
+        } 
+
+        function ftoc() 
+        { 
+            document.getElementById("C").value=( document.getElementById("F").value-32)*5/9 ;
+            
+
+        } 
+        </script>
+        <p id = "demo"></p>
 </body>
 </html>
